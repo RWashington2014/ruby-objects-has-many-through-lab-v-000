@@ -12,7 +12,7 @@ class Patient
 
     def add_appointment(ap_obj)
       self.appointments << ap_obj
-      ap_obj.paitent = self
+      ap_obj.patient = self
     end
 
     def doctors
