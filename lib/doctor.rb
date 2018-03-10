@@ -6,16 +6,16 @@ class Doctor
       @appointments = []
     end
 
-    def appointments
+    def appointments      # => Has Many Relationship
       @appointments
     end
 
-    def add_appointment(ap_obj)
+    def add_appointment(ap_obj)     # => Has Many Relationship
       self.appointments << ap_obj
       ap_obj.doctor = self
     end
 
-    def patients
+    def patients        # => Has Many Relationship
       self.appointments.collect do |app|
         app.patient
       end
